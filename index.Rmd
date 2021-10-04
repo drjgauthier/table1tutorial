@@ -11,6 +11,7 @@ output:
   distill::distill_article:
     toc: true
     toc_depth: 2
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
@@ -29,16 +30,21 @@ library(haven)
 df <- read_sas("gs1801_v2.sas7bdat",NULL)
 ```
 
-## Look at the data
+## Glimpse the data
 Two very useful functions: dplyr::glimpse() and skimr::skim()
 Let's give it a try!
 
 ```{r glimpse,layout="l-body-outset"}
 glimpse(df)
-skimr::skim(df)
 ```
 
 ## Build Table 1!
+We are shown a list of variable names, variable type (here, numeric; "dbl" stands for double class. A double-precision floating point number.) We are also shown the first 15 rows.
+
+```{r skim}
+skimr::skim(df)
+```
+The skim() function is another great tool to explore your dataset. Descriptive statistics are given for each variables, including number of missing values.
 Now that we know the dataset is looking nice and clean (particularly variable names!), let's build the table using the great {gtsummary} package.
 
 ```{r,layout="l-body-outset"}
