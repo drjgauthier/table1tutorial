@@ -38,14 +38,17 @@ Let's give it a try!
 glimpse(df)
 ```
 
-## Build Table 1!
+## Skim the data
 We are shown a list of variable names, variable type (here, numeric; "dbl" stands for double class. A double-precision floating point number.) We are also shown the first 15 rows.
 
 ```{r skim}
 skimr::skim(df)
 ```
+
 The skim() function is another great tool to explore your dataset. Descriptive statistics are given for each variables, including number of missing values.
 Now that we know the dataset is looking nice and clean (particularly variable names!), let's build the table using the great {gtsummary} package.
+
+## Build Table 1 (Patient and transplant characteristics)
 
 ```{r,layout="l-body-outset"}
 df %>% 
