@@ -1,7 +1,7 @@
 ---
 title: "Build your Table 1 in R"
 description: |
-  A quick tutorial for clinicians new to R
+  A quick mini-tutorial for clinicians new to R
 author:
   - name: Jordan Gauthier
     url: https://github.com/drjgauthier
@@ -52,7 +52,7 @@ Now that we know the dataset is looking nice and clean (particularly variable na
 
 ```{r,layout="l-body-outset"}
 df %>% 
-  transmute( # transmute() allows use to both select and transform variables
+  transmute( # transmute() allows us to both select and transform variables
     Sex=ifelse(sex==1,"Male","Female"), #ifelse() is convenient to recode binary variable
     Age=age,
     `Performance status (Karnosfky Scale)`=ifelse(kps==1,"90-100","<90"), #Back ticks allow you include spaces in variable names
@@ -72,9 +72,7 @@ df %>%
 ```{r,layout="l-body-outset"}
 df %>%
   transmute(
-    # transmute() allows use to both select and transform variables
     Sex = ifelse(sex == 1, "Male", "Female"),
-    #ifelse() is convenient to recode binary variable
     Age = age,
     `Performance status (Karnosfky Scale)` = ifelse(kps == 1, "90-100", "<90"),
     `Disease type` = recode(

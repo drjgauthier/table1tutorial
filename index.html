@@ -88,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>Build your Table 1 in R</title>
 
-  <meta property="description" itemprop="description" content="A quick tutorial for clinicians new to R"/>
+  <meta property="description" itemprop="description" content="A quick mini-tutorial for clinicians new to R"/>
 
 
   <!--  https://schema.org/Article -->
@@ -99,19 +99,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Build your Table 1 in R"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="A quick tutorial for clinicians new to R"/>
+  <meta property="og:description" content="A quick mini-tutorial for clinicians new to R"/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Build your Table 1 in R"/>
-  <meta property="twitter:description" content="A quick tutorial for clinicians new to R"/>
+  <meta property="twitter:description" content="A quick mini-tutorial for clinicians new to R"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Build your Table 1 in R"]},{"type":"character","attributes":{},"value":["A quick tutorial for clinicians new to R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Jordan Gauthier"]},{"type":"character","attributes":{},"value":["https://github.com/drjgauthier"]},{"type":"character","attributes":{},"value":["Fred Hutch/UW"]}]}]},{"type":"character","attributes":{},"value":["2021-10-04"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Build your Table 1 in R"]},{"type":"character","attributes":{},"value":["A quick mini-tutorial for clinicians new to R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Jordan Gauthier"]},{"type":"character","attributes":{},"value":["https://github.com/drjgauthier"]},{"type":"character","attributes":{},"value":["Fred Hutch/UW"]}]}]},{"type":"character","attributes":{},"value":["2021-10-04"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1455,7 +1455,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Build your Table 1 in R","description":"A quick tutorial for clinicians new to R","authors":[{"author":"Jordan Gauthier","authorURL":"https://github.com/drjgauthier","affiliation":"Fred Hutch/UW","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-04T00:00:00.000+00:00","citationText":"Gauthier, 2021"}
+{"title":"Build your Table 1 in R","description":"A quick mini-tutorial for clinicians new to R","authors":[{"author":"Jordan Gauthier","authorURL":"https://github.com/drjgauthier","affiliation":"Fred Hutch/UW","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-04T00:00:00.000+00:00","citationText":"Gauthier, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1468,7 +1468,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Build your Table 1 in R</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>A quick tutorial for clinicians new to R</p></p>
+<p><p>A quick mini-tutorial for clinicians new to R</p></p>
 </div>
 
 <div class="d-byline">
@@ -2335,7 +2335,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>df</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>transmute</span><span class='op'>(</span> <span class='co'># transmute() allows use to both select and transform variables</span>
+  <span class='fu'>transmute</span><span class='op'>(</span> <span class='co'># transmute() allows us to both select and transform variables</span>
     Sex<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>sex</span><span class='op'>==</span><span class='fl'>1</span>,<span class='st'>"Male"</span>,<span class='st'>"Female"</span><span class='op'>)</span>, <span class='co'>#ifelse() is convenient to recode binary variable</span>
     Age<span class='op'>=</span><span class='va'>age</span>,
     `Performance status (Karnosfky Scale)`<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>kps</span><span class='op'>==</span><span class='fl'>1</span>,<span class='st'>"90-100"</span>,<span class='st'>"&lt;90"</span><span class='op'>)</span>, <span class='co'>#Back ticks allow you include spaces in variable names</span>
@@ -2354,7 +2354,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bgjcmnyhjj .gt_table {
+#btntrvqqtr .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2379,7 +2379,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-left-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_heading {
+#btntrvqqtr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2391,7 +2391,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_title {
+#btntrvqqtr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2401,7 +2401,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-bottom-width: 0;
 }
 
-#bgjcmnyhjj .gt_subtitle {
+#btntrvqqtr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2411,13 +2411,13 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-top-width: 0;
 }
 
-#bgjcmnyhjj .gt_bottom_border {
+#btntrvqqtr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_col_headings {
+#btntrvqqtr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2432,7 +2432,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_col_heading {
+#btntrvqqtr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2452,7 +2452,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   overflow-x: hidden;
 }
 
-#bgjcmnyhjj .gt_column_spanner_outer {
+#btntrvqqtr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2464,15 +2464,15 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-right: 4px;
 }
 
-#bgjcmnyhjj .gt_column_spanner_outer:first-child {
+#btntrvqqtr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bgjcmnyhjj .gt_column_spanner_outer:last-child {
+#btntrvqqtr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bgjcmnyhjj .gt_column_spanner {
+#btntrvqqtr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2484,7 +2484,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   width: 100%;
 }
 
-#bgjcmnyhjj .gt_group_heading {
+#btntrvqqtr .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2506,7 +2506,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   vertical-align: middle;
 }
 
-#bgjcmnyhjj .gt_empty_group_heading {
+#btntrvqqtr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2521,15 +2521,15 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   vertical-align: middle;
 }
 
-#bgjcmnyhjj .gt_from_md > :first-child {
+#btntrvqqtr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bgjcmnyhjj .gt_from_md > :last-child {
+#btntrvqqtr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bgjcmnyhjj .gt_row {
+#btntrvqqtr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2548,7 +2548,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   overflow-x: hidden;
 }
 
-#bgjcmnyhjj .gt_stub {
+#btntrvqqtr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2560,7 +2560,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-left: 12px;
 }
 
-#bgjcmnyhjj .gt_summary_row {
+#btntrvqqtr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2570,7 +2570,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-right: 5px;
 }
 
-#bgjcmnyhjj .gt_first_summary_row {
+#btntrvqqtr .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2580,7 +2580,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-top-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_grand_summary_row {
+#btntrvqqtr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2590,7 +2590,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-right: 5px;
 }
 
-#bgjcmnyhjj .gt_first_grand_summary_row {
+#btntrvqqtr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2600,11 +2600,11 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-top-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_striped {
+#btntrvqqtr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bgjcmnyhjj .gt_table_body {
+#btntrvqqtr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2613,7 +2613,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-bottom-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_footnotes {
+#btntrvqqtr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2627,13 +2627,13 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_footnote {
+#btntrvqqtr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#bgjcmnyhjj .gt_sourcenotes {
+#btntrvqqtr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2647,46 +2647,46 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#bgjcmnyhjj .gt_sourcenote {
+#btntrvqqtr .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#bgjcmnyhjj .gt_left {
+#btntrvqqtr .gt_left {
   text-align: left;
 }
 
-#bgjcmnyhjj .gt_center {
+#btntrvqqtr .gt_center {
   text-align: center;
 }
 
-#bgjcmnyhjj .gt_right {
+#btntrvqqtr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bgjcmnyhjj .gt_font_normal {
+#btntrvqqtr .gt_font_normal {
   font-weight: normal;
 }
 
-#bgjcmnyhjj .gt_font_bold {
+#btntrvqqtr .gt_font_bold {
   font-weight: bold;
 }
 
-#bgjcmnyhjj .gt_font_italic {
+#btntrvqqtr .gt_font_italic {
   font-style: italic;
 }
 
-#bgjcmnyhjj .gt_super {
+#btntrvqqtr .gt_super {
   font-size: 65%;
 }
 
-#bgjcmnyhjj .gt_footnote_marks {
+#btntrvqqtr .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="bgjcmnyhjj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="btntrvqqtr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -2764,9 +2764,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>df</span> <span class='op'>%&gt;%</span>
   <span class='fu'>transmute</span><span class='op'>(</span>
-    <span class='co'># transmute() allows use to both select and transform variables</span>
     Sex <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>sex</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"Male"</span>, <span class='st'>"Female"</span><span class='op'>)</span>,
-    <span class='co'>#ifelse() is convenient to recode binary variable</span>
     Age <span class='op'>=</span> <span class='va'>age</span>,
     `Performance status (Karnosfky Scale)` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>kps</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"90-100"</span>, <span class='st'>"&lt;90"</span><span class='op'>)</span>,
     `Disease type` <span class='op'>=</span> <span class='fu'>recode</span><span class='op'>(</span>
@@ -2793,7 +2791,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#rtqjsqjmig .gt_table {
+#xiogpyxwpo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2818,7 +2816,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-left-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_heading {
+#xiogpyxwpo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2830,7 +2828,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_title {
+#xiogpyxwpo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2840,7 +2838,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-bottom-width: 0;
 }
 
-#rtqjsqjmig .gt_subtitle {
+#xiogpyxwpo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2850,13 +2848,13 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-top-width: 0;
 }
 
-#rtqjsqjmig .gt_bottom_border {
+#xiogpyxwpo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_col_headings {
+#xiogpyxwpo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2871,7 +2869,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_col_heading {
+#xiogpyxwpo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2891,7 +2889,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   overflow-x: hidden;
 }
 
-#rtqjsqjmig .gt_column_spanner_outer {
+#xiogpyxwpo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2903,15 +2901,15 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-right: 4px;
 }
 
-#rtqjsqjmig .gt_column_spanner_outer:first-child {
+#xiogpyxwpo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rtqjsqjmig .gt_column_spanner_outer:last-child {
+#xiogpyxwpo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rtqjsqjmig .gt_column_spanner {
+#xiogpyxwpo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2923,7 +2921,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   width: 100%;
 }
 
-#rtqjsqjmig .gt_group_heading {
+#xiogpyxwpo .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2945,7 +2943,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   vertical-align: middle;
 }
 
-#rtqjsqjmig .gt_empty_group_heading {
+#xiogpyxwpo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2960,15 +2958,15 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   vertical-align: middle;
 }
 
-#rtqjsqjmig .gt_from_md > :first-child {
+#xiogpyxwpo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rtqjsqjmig .gt_from_md > :last-child {
+#xiogpyxwpo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rtqjsqjmig .gt_row {
+#xiogpyxwpo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2987,7 +2985,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   overflow-x: hidden;
 }
 
-#rtqjsqjmig .gt_stub {
+#xiogpyxwpo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2999,7 +2997,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-left: 12px;
 }
 
-#rtqjsqjmig .gt_summary_row {
+#xiogpyxwpo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3009,7 +3007,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-right: 5px;
 }
 
-#rtqjsqjmig .gt_first_summary_row {
+#xiogpyxwpo .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3019,7 +3017,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-top-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_grand_summary_row {
+#xiogpyxwpo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3029,7 +3027,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   padding-right: 5px;
 }
 
-#rtqjsqjmig .gt_first_grand_summary_row {
+#xiogpyxwpo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3039,11 +3037,11 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-top-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_striped {
+#xiogpyxwpo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rtqjsqjmig .gt_table_body {
+#xiogpyxwpo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3052,7 +3050,7 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-bottom-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_footnotes {
+#xiogpyxwpo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3066,13 +3064,13 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_footnote {
+#xiogpyxwpo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#rtqjsqjmig .gt_sourcenotes {
+#xiogpyxwpo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3086,46 +3084,46 @@ $ dnrage      &lt;dbl&gt; NA, 24.79452, NA, 48.57260, 30.80000, NA, NA, NA…</c
   border-right-color: #D3D3D3;
 }
 
-#rtqjsqjmig .gt_sourcenote {
+#xiogpyxwpo .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#rtqjsqjmig .gt_left {
+#xiogpyxwpo .gt_left {
   text-align: left;
 }
 
-#rtqjsqjmig .gt_center {
+#xiogpyxwpo .gt_center {
   text-align: center;
 }
 
-#rtqjsqjmig .gt_right {
+#xiogpyxwpo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rtqjsqjmig .gt_font_normal {
+#xiogpyxwpo .gt_font_normal {
   font-weight: normal;
 }
 
-#rtqjsqjmig .gt_font_bold {
+#xiogpyxwpo .gt_font_bold {
   font-weight: bold;
 }
 
-#rtqjsqjmig .gt_font_italic {
+#xiogpyxwpo .gt_font_italic {
   font-style: italic;
 }
 
-#rtqjsqjmig .gt_super {
+#xiogpyxwpo .gt_super {
   font-size: 65%;
 }
 
-#rtqjsqjmig .gt_footnote_marks {
+#xiogpyxwpo .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="rtqjsqjmig" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="xiogpyxwpo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
