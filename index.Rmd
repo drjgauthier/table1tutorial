@@ -1,0 +1,95 @@
+---
+title: "Build your Table 1 in R"
+description: |
+  A quick tutorial for clinicians new to R
+author:
+  - name: Jordan Gauthier
+    url: https://github.com/drjgauthier
+    affiliation: Fred Hutch/UW
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import dataset
+First let's import a dataset. We will use open-access data from the CIBMTR:
+*HLA haploidentical versus matched unrelated donor transplants with post-transplant cyclophosphamide based prophylaxis.*
+https://www.cibmtr.org/ReferenceCenter/PubList/PubDsDownload/Pages/default.aspx
+
+```{r importpckg}
+library(tidyverse)
+library(gtsummary)
+library(haven)
+df <- read_sas("gs1801_v2.sas7bdat",NULL)
+```
+
+## Look at the data
+Two very useful functions: dplyr::glimpse() and skimr::skim()
+Let's give it a try!
+
+```{r glimpse,layout="l-body-outset"}
+glimpse(df)
+skimr::skim(df)
+```
+
+## Build Table 1!
+Now that we know the dataset is looking nice and clean (particularly variable names!), let's build the table using the great {gtsummary} package.
+
+```{r,layout="l-body-outset"}
+df %>% 
+  transmute( # transmute() allows use to both select and transform variables
+    Sex=ifelse(sex==1,"Male","Female"), #ifelse() is convenient to recode binary variable
+    Age=age,
+    `Performance status (Karnosfky Scale)`=ifelse(kps==1,"90-100","<90"), #Back ticks allow you include spaces in variable names
+    `Disease type`=recode(disease,"1"="AML","2"="ALL","3"="MDS")
+  ) %>% 
+    tbl_summary(
+    statistic = list(
+      all_continuous() ~ "{median} ({p25}, {p75}) \n {min}-{max}",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) %>% 
+  bold_labels() 
+```
+
+### Split and compare groups in Table 1
+
+```{r,layout="l-body-outset"}
+df %>%
+  transmute(
+    # transmute() allows use to both select and transform variables
+    Sex = ifelse(sex == 1, "Male", "Female"),
+    #ifelse() is convenient to recode binary variable
+    Age = age,
+    `Performance status (Karnosfky Scale)` = ifelse(kps == 1, "90-100", "<90"),
+    `Disease type` = recode(
+      disease,
+      "1" = "AML",
+      "2" = "ALL",
+      "3" = "MDS"
+    ),
+    `Donor group` = ifelse(main == 1, "Haplo PTCy/CNI/MMF", "MUD PT-Cy/CNI/MMF")
+  ) %>%
+  tbl_summary(
+    by = `Donor group`,
+    statistic = list(
+      all_continuous() ~ "{median} ({p25}, {p75}) \n {min}-{max}",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) %>%
+  bold_labels() %>%
+  add_p() %>%
+  add_stat_label()
+```
+
+*More resources:*  
+
+{gtsummary} to build/tweak your tables [https://www.danieldsjoberg.com/gtsummary/reference/index.html](https://www.danieldsjoberg.com/gtsummary/reference/index.html)  
+
+{dplyr} for data manipulation [https://dplyr.tidyverse.org/](https://dplyr.tidyverse.org/)  
