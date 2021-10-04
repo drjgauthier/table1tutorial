@@ -95,8 +95,14 @@ df %>%
   add_stat_label()
 ```
 
-*More resources:*  
+Et voilà!
+You now know how to automate the creation of beautiful, "publication-ready" tables.
 
-{gtsummary} to build/tweak your tables [https://www.danieldsjoberg.com/gtsummary/reference/index.html](https://www.danieldsjoberg.com/gtsummary/reference/index.html)  
+## More resources
 
-{dplyr} for data manipulation [https://dplyr.tidyverse.org/](https://dplyr.tidyverse.org/)  
+### {gtsummary}
+Check out documentation to improve/further tweak your tables [https://www.danieldsjoberg.com/gtsummary/reference/index.html](https://www.danieldsjoberg.com/gtsummary/reference/index.html)  
+
+### {dplyr} for data manipulation
+Inevitable you will need to learn the {dplyr} grammar to adroitly wrangle your datasets.
+[https://dplyr.tidyverse.org/](https://dplyr.tidyverse.org/)  
